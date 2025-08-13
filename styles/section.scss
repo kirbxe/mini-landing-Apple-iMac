@@ -1,0 +1,72 @@
+@use './variables.scss' as vars;
+
+
+.section{
+    $this: &;
+    height: 86rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 5.8rem;
+    margin-bottom: 5.1rem;
+    
+    @media all and (max-width: vars.$media-s){
+        height: 70rem;
+        margin-left: 1rem;
+        margin-right: 1rem;  
+
+    }
+    
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #{$this}__text-title{
+                
+                font-size:vars.$size-h1;
+                text-align: center;
+                @media all and (max-width: vars.$media-s) {
+                    font-size: vars.$size-h1-mob;
+                }
+            }
+
+    }
+    &__img{
+
+        display: flex;
+        justify-content: center;
+        width: 64.9rem;
+        height: 53.2rem;
+        margin-top: 2.1rem;
+        @media all and (max-width: vars.$media-s) {
+            width: 55.9rem;
+            height: 43rem;
+        }
+    }
+
+    &__characteristics{
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 6.5rem;
+
+        #{$this}__point-characteristics{
+
+            display: flex;
+            flex-direction: column;
+            border-bottom: 4px vars.$outline-sub-color solid;
+            width: 13rem;
+            height: 9.5rem;
+            text-align: left;
+            @media all and (max-width: vars.$media-s) {
+                width: 9rem;
+                height: 7.5rem;
+            }
+        }
+
+    }
+
+}

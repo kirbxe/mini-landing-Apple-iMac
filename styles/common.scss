@@ -1,0 +1,68 @@
+@use './variables.scss' as vars;
+
+
+html{
+font-size: vars.$font-size-base;
+font-family: vars.$font-family;
+}
+
+body{
+
+display: flex;
+justify-content: center;
+margin: 0;
+padding: 0;
+width: 100%;
+}
+
+.page{
+
+display: flex;
+flex-direction: column;
+width: 100%;
+background-color: vars.$dark-main-color;
+color: vars.$white-color;
+}
+
+
+h1,h2{
+font-weight: vars.$weight-bold;
+margin: 0;
+font-family: vars.$font-family;
+
+}
+
+
+h1{
+
+    font-size: vars.$size-h1;
+    @media all and (max-width: vars.$media-s) {
+        font-size: vars.$size-h1-mob;
+
+    }
+
+}
+h2{
+
+    font-size: vars.$size-h2;
+    @media all and (max-width: vars.$media-s) {
+        font-size: vars.$size-h2-mob;
+
+    }
+
+}
+p{
+    margin: 0;
+    padding: 0;
+    font-size: vars.$size-p;
+    @media all and (max-width: vars.$media-s){
+        font-size: vars.$size-p-mob;
+    }
+
+
+
+}
+
+
+
+
